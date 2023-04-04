@@ -12,7 +12,7 @@
 <body>
     <header>
         <nav class="container">
-            <a href="TrangChu.html" class="logo">
+            <a href="" class="logo">
                 <img src="image/logo.png" alt="">
             </a>
             <ul class="menu">
@@ -36,14 +36,19 @@
                 </li>
                 <li><i class="fal fa-heart"></i></li>
                 <li><i class="fal fa-shopping-cart"></i></li>
-                <li><i class="far fa-bars"></i></li>
+                <li id="li_acount" style="cursor: pointer;"><i class="far fa-bars" ></i>
+                    <ul id="ulnav_account" >
+                        <li><a href="signin.html">Log in</a></li>
+                        <li><a href="signup.html" id="a_signin">Create Account</a></li>
+                    </ul>
+                </li>
             </ul>
         </nav>
     </header>
 <!-- ------------------------------------------------nav sanpham------------------------------------ -->
 <nav class="text-center">
     <p>SẢN PHẨM</p>
-    <span><a href="html/TrangChu.html">Trang chủ </a></span> <span>/</span> <span>Pie choco</span>
+    <span><a href="TrangChu.html">Trang chủ </a></span> <span>/</span> <span>Pie choco</span>
 </nav>
 
 
@@ -51,7 +56,7 @@
 <div class="content">
     <div class="content-center">
         <div class="content-center-left">
-            <img src="image/chi-tiet-sp1.jpg" alt="">
+            <img src="/image/chi-tiet-sp1.jpg" alt="">
         </div>
         <div class="content-center-right">
             <h2 class="product-title">Bánh Sô cô la</h2>
@@ -106,10 +111,10 @@
         <div class="product-container">
             <div class="container">
                 <div class="product-image">
-                    <img src="image/sp1.jpg" alt="" class="image">
-                    <img src="image/sp3.jpg" alt="" class="image2">
+                    <img src="/image/sp1.jpg" alt="" class="image">
+                    <img src="/image/sp3.jpg" alt="" class="image2">
                     <div class="overlay">
-                        <a href="ChiTietSanPham.html" class="icon">
+                        <a href="/html/ChiTietSanPham.html" class="icon">
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
@@ -130,10 +135,10 @@
             </div>
             <div class="container">
                 <div class="product-image">
-                    <img src="image/sp1.jpg" alt="" class="image">
-                    <img src="image/sp3.jpg" alt="" class="image2">
+                    <img src="/image/sp1.jpg" alt="" class="image">
+                    <img src="/image/sp3.jpg" alt="" class="image2">
                     <div class="overlay">
-                        <a href="ChiTietSanPham.html" class="icon">
+                        <a href="/html/ChiTietSanPham.html" class="icon">
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
@@ -154,10 +159,10 @@
             </div>
             <div class="container">
                 <div class="product-image">
-                    <img src="image/sp1.jpg" alt="" class="image">
-                    <img src="image/sp3.jpg" alt="" class="image2">
+                    <img src="/image/sp1.jpg" alt="" class="image">
+                    <img src="/image/sp3.jpg" alt="" class="image2">
                     <div class="overlay">
-                        <a href="ChiTietSanPham.html" class="icon">
+                        <a href="/html/ChiTietSanPham.html" class="icon">
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
@@ -178,10 +183,10 @@
             </div>
             <div class="container">
                 <div class="product-image">
-                    <img src="image/sp1.jpg" alt="" class="image">
-                    <img src="image/sp3.jpg" alt="" class="image2">
+                    <img src="/image/sp1.jpg" alt="" class="image">
+                    <img src="/image/sp3.jpg" alt="" class="image2">
                     <div class="overlay">
-                        <a href="ChiTietSanPham.html" class="icon">
+                        <a href="/html/ChiTietSanPham.html" class="icon">
                             <i class="fas fa-search"></i>
                         </a>
                     </div>
@@ -208,7 +213,7 @@
 <footer>
     <div class="footer-top">
         <div class="footer-text-start">
-            <img src="image/footer_logo.png" alt="">
+            <img src="/image/footer_logo.png" alt="">
             <div class="address footer-top-flex">
                 <i class="fas fa-home"></i>
                 <p>
@@ -279,5 +284,36 @@
     header.classList.toggle("sticky", window.scrollY > 0);
     console.log(window.scrollY);
 })
+
+const li_acount = document.getElementById('li_acount');
+   const ulnav_account = document.getElementById('ulnav_account');
+   // Khởi tạo biến boolean để lưu trạng thái của menu
+let isSubMenuOpen = false;
+
+// Gán sự kiện click cho button
+li_acount.addEventListener('click', function(e) {
+  if (isSubMenuOpen) {
+    // Nếu menu đang mở, thì ẩn nó đi
+    ulnav_account.style.display = 'none';
+    isSubMenuOpen = false;
+  } else {
+    // Nếu menu đang ẩn, thì hiện nó lên
+    ulnav_account.style.display = 'block';
+    isSubMenuOpen = true;
+  }
+  
+  // Ngăn chặn sự kiện click trên document được kích hoạt
+  e.stopPropagation();
+});
+
+// Gán sự kiện click trên document
+document.addEventListener('click', function() {
+  // Nếu menu đang mở, thì ẩn nó đi
+  if (isSubMenuOpen) {
+    ulnav_account.style.display = 'none';
+    isSubMenuOpen = false;
+  }
+});
+ 
 </script>
 </html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/stylesignin.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.15.4/css/all.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dancing+Script">
+ 
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <a href="TrangChu.html" class="logo">
+                <img src="/image/logo.png" alt="">
+            </a>
+            <ul class="menu">
+                <li><a href="TrangChu.html">Trang chủ</a></li>
+                <li><a href="">Thông tin</a></li>
+                <li><a href="">Sản phẩm</a>
+                    <ul class="sub-menu">
+                        <li><a href="">Socola thanh</a></li>
+                        <li><a href="">Bánh kẹo</a></li>
+                        <li><a href="">Kẹo socola</a></li>
+                    </ul>  
+                </li>
+                <li><a href="">Trang</a></li>
+            </ul>
+            <ul class="other">
+                <li class="search-container">
+                    <form action="" id="search-box">
+                        <input type="text" id="search-text" placeholder="Tìm kiếm" autocomplete="off" required>
+                        <button id="search-btn"><i class="fal fa-search"></i></button>
+                    </form>
+                </li>
+                <li><i class="fal fa-heart"></i></li>
+                <li><i class="fal fa-shopping-cart"></i></li>
+                <li id="li_acount" style="cursor: pointer;"> <i class="far fa-bars"></i>
+                    <ul id="ulnav_account" >
+                        <li><a href="signin.html">Log in</a></li>
+                        <li><a href="signup.html" id="a_signin">Create Account</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="breadcrumb">
+        <div class="container_content">
+            <p>ACCOUNT</p>
+            <a href="TrangChu.html">Home</a>
+            <span>/</span>
+            <span href="">Create Account</span>
+        </div>
+     
+    </div>
+    <div class="container_user">
+        <form action="" id="AccountForm">
+            <input type="email" name="" id="" placeholder="Email">
+            <input type="text" name="" id="" placeholder="Mật Khẩu">
+            <p><input type="submit" name="" id="" value="Đăng Nhập"></p>
+            <div class="link_swapper">
+            <a href="" onclick="showRecoverPasswordForm(); return false;">Quên Mật Khẩu?</a>
+            <a href="/html/signup.html">Tạo Tài Khoản</a>
+            <a href="/TrangChu.html">Quay Về Trang Chủ</a>
+            </div>
+        </form>
+        <form action="" id="ForgetForm">
+            <h2>Tạo lại mật khẩu của bạn</h2>
+            <p class="p_infor">Chúng tôi sẽ gửi cho bạn tin nhắn qua email để tạo lại mật khẩu.</p>
+            <input type="email" name="" id="" placeholder="Email">
+            <p class="p_button"><input type="submit" name="" id="" value="Gửi" ></p>
+            <div class="close_reset" onclick="hideRecoverPasswordForm(); return false;">
+                <i class="fas fa-times" ></i>
+            </div>
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer-top">
+            <div class="footer-text-start">
+                <img src="/image/footer_logo.png" alt="">
+                <div class="address footer-top-flex">
+                    <i class="fas fa-home"></i>
+                    <p>
+                        12 Nguyễn Văn Bảo
+                        <br>
+                        Phường 04, Gò Vấp, Thành phố Hồ Chí Minh
+                    </p>
+                </div>
+                <div class="phone footer-top-flex">
+                    <i class="fas fa-phone-alt"></i>
+                    <p>0123456789</p>
+                </div>
+                <div class="gmail footer-top-flex footer-top-hover">
+                    <i class="far fa-clock"></i>
+                    <p><a href="" style="color: #eee; text-decoration: none;">nguyenluc1234012@gmail.com</a></p>
+                </div>
+                <div class="footer-top-logo">
+                    <ul class="footer-top-flex footer-top-hover">
+                        <li><a href=""><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="https://www.facebook.com/luc.nguyen.568294"><i class="fab fa-facebook"></i></a></li>
+                        <li><a href=""><i class="fab fa-instagram"></i></a></li>
+                        <li><a href=""><i class="fab fa-youtube"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-text-start">
+                <h5>Hỗ trợ</h5>
+                <ul class="footer-top-hover">
+                    <li><a href="">Giao hàng</a></li>
+                    <li><a href="">Đơn đặt hàng</a></li>
+                    <li><a href="">Quan tâm</a></li>
+                    <li><a href="">Hoàn tiền và trả lại</a></li>
+                    <li><a href="">Danh mục đầu tư</a></li>
+                </ul>
+            </div>
+            <div class="footer-text-start">
+                <h5>Thông tin</h5>
+                <ul class="footer-top-hover">
+                    <li><a href="">Cụm từ tim kiếm</a></li>
+                    <li><a href="">Tìm kiếm nâng cao</a></li>
+                    <li><a href="">Trợ giúp và hỏi đáp</a></li>
+                    <li><a href="">Vị trí cửa hàng</a></li>
+                    <li><a href="">Đặt hàng và trả lại</a></li>
+                </ul>
+            </div>
+            <div class="footer-text-start">
+                <h5>Giúp đỡ</h5>
+                <ul class="footer-top-hover">
+                    <li><a href="">Tìm kiếm</a></li>
+                    <li><a href="">Giúp đỡ</a></li>
+                    <li><a href="">Thông tin</a></li>
+                    <li><a href="">Chính sách bảo mật</a></li>
+                    <li><a href="">Chi tiết vận chuyển</a></li>
+                </ul>
+            </div>
+            
+        </div>
+        <div class="footer-bottom">
+            <div class="footer-bottom-copyright">
+                <p>© 2023 Cocoa Theme Design Themes</p>
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+   
+  function showRecoverPasswordForm() {
+    document.getElementById('ForgetForm').style.display = 'block';
+    document.getElementById('AccountForm').style.display='none';
+  }
+
+  function hideRecoverPasswordForm() {
+    document.getElementById('ForgetForm').style.display = 'none';
+    document.getElementById('AccountForm').style.display = 'block';
+  }
+
+  // Allow deep linking to the recover password form
+  if (window.location.hash == '#recover') { showRecoverPasswordForm() }
+
+  // reset_success is only true when the reset form is
+  const li_acount = document.getElementById('li_acount');
+   const ulnav_account = document.getElementById('ulnav_account');
+   // Khởi tạo biến boolean để lưu trạng thái của menu
+let isSubMenuOpen = false;
+
+// Gán sự kiện click cho button
+li_acount.addEventListener('click', function(e) {
+  if (isSubMenuOpen) {
+    // Nếu menu đang mở, thì ẩn nó đi
+    ulnav_account.style.display = 'none';
+    isSubMenuOpen = false;
+  } else {
+    // Nếu menu đang ẩn, thì hiện nó lên
+    ulnav_account.style.display = 'block';
+    isSubMenuOpen = true;
+  }
+  
+  // Ngăn chặn sự kiện click trên document được kích hoạt
+  e.stopPropagation();
+});
+
+// Gán sự kiện click trên document
+document.addEventListener('click', function() {
+  // Nếu menu đang mở, thì ẩn nó đi
+  if (isSubMenuOpen) {
+    ulnav_account.style.display = 'none';
+    isSubMenuOpen = false;
+  }
+});
+    </script>
+</body>
+</html>

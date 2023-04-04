@@ -38,7 +38,12 @@
             </li>
             <li><i class="fal fa-heart"></i></li>
             <li><i class="fal fa-shopping-cart"></i></li>
-            <li><i class="far fa-bars"></i></li>
+            <li id="li_acount" style="cursor: pointer;"><i class="far fa-bars" ></i>
+                <ul id="ulnav_account" >
+                    <li><a href="signin.html">Log in</a></li>
+                    <li><a href="signup.html" id="a_signin">Create Account</a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 </header>
@@ -443,5 +448,36 @@ slideIndex = 1;
 showSlides(slideIndex);
 }, 5000); // Chuyển đổi slide mỗi 5 giây
 
+
+
+const li_acount = document.getElementById('li_acount');
+   const ulnav_account = document.getElementById('ulnav_account');
+   // Khởi tạo biến boolean để lưu trạng thái của menu
+let isSubMenuOpen = false;
+
+// Gán sự kiện click cho button
+li_acount.addEventListener('click', function(e) {
+  if (isSubMenuOpen) {
+    // Nếu menu đang mở, thì ẩn nó đi
+    ulnav_account.style.display = 'none';
+    isSubMenuOpen = false;
+  } else {
+    // Nếu menu đang ẩn, thì hiện nó lên
+    ulnav_account.style.display = 'block';
+    isSubMenuOpen = true;
+  }
+  
+  // Ngăn chặn sự kiện click trên document được kích hoạt
+  e.stopPropagation();
+});
+
+// Gán sự kiện click trên document
+document.addEventListener('click', function() {
+  // Nếu menu đang mở, thì ẩn nó đi
+  if (isSubMenuOpen) {
+    ulnav_account.style.display = 'none';
+    isSubMenuOpen = false;
+  }
+});
 </script>
 </html>
